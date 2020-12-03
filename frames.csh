@@ -69,5 +69,5 @@ while ($n < $max)
     @ n = $n + 1
 end
 echo "Making gif in $1.gif"
-convert -delay 20 -loop 0 -scale 400% $outdir/$1/*.ppm $1.gif
+ffmpeg -r 10 -i $outdir/$1/$1_$2_1%04d.ppm $1.gif
 echo ""
